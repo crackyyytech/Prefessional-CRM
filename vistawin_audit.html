@@ -1,0 +1,1597 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Vistwin Solution - Home</title>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes" name="viewport">
+    <meta content="Professional Software Solutions" name="keywords">
+    <meta content="Software Development & Web Design Services" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet"> 
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    
+    <!-- Custom Design System -->
+    <link href="css/custom-design.css" rel="stylesheet">
+    
+    <!-- Modern Header Design -->
+    <link href="css/header-design.css" rel="stylesheet">
+    
+    <!-- Advanced Animations -->
+    <link href="css/animations.css" rel="stylesheet">
+    
+    <!-- Motion System -->
+    <link href="css/motion-system.css" rel="stylesheet">
+    
+    <!-- Production Polish -->
+    <link href="css/production-polish.css" rel="stylesheet">
+    
+    <!-- About Section Styles -->
+    <link href="css/about-section.css" rel="stylesheet">
+    
+    <!-- Ultra About Section -->
+    <link href="css/about-ultra.css" rel="stylesheet">
+    
+    <!-- Modern About Section V2 -->
+    <link href="css/about-modern.css" rel="stylesheet">
+    
+    <!-- Ultra Features Section -->
+    <link href="css/features-ultra.css" rel="stylesheet">
+    
+    <!-- Colorful Theme -->
+    <link href="css/colorful-theme.css" rel="stylesheet">
+    
+    <!-- Mobile Responsive -->
+    <link href="css/mobile-responsive.css" rel="stylesheet">
+    
+    <!-- Mobile App Styles -->
+    <link href="css/mobile-app.css" rel="stylesheet">
+    
+    <!-- Mobile Performance Optimizations -->
+    <link href="css/mobile-performance.css" rel="stylesheet">
+    
+    <!-- Software Download Styles -->
+    <link href="css/software-download.css" rel="stylesheet">
+    
+    <!-- Services Section Styles -->
+    <link href="css/services-section.css" rel="stylesheet">
+
+    <style>
+    /* Complete Header UI Design System */
+    :root {
+        --header-primary: #667eea;
+        --header-secondary: #764ba2;
+        --header-accent: #f093fb;
+        --header-dark: #1a1a2e;
+        --header-light: #ffffff;
+    }
+
+    /* Enhanced Topbar */
+    .topbar {
+        background: linear-gradient(135deg, #8b5cf6 0%, #3b82f6 50%, #06b6d4 100%);
+        background-size: 200% 200%;
+        animation: gradientMove 10s ease infinite;
+        color: white;
+        padding: 10px 0;
+        font-size: 13px;
+        position: relative;
+        z-index: 1002;
+        box-shadow: 0 2px 15px rgba(139, 92, 246, 0.3);
+    }
+    
+    @keyframes gradientMove {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+    }
+
+    .topbar-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .topbar-left,
+    .topbar-right {
+        display: flex;
+        align-items: center;
+        gap: 25px;
+        flex-wrap: wrap;
+    }
+
+    .topbar-item {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        color: white;
+        transition: all 0.3s ease;
+    }
+
+    .topbar-item:hover {
+        transform: translateY(-2px);
+    }
+
+    .topbar-item i {
+        font-size: 14px;
+        opacity: 0.9;
+        animation: iconFloat 3s ease-in-out infinite;
+    }
+
+    .topbar-item a {
+        color: white;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        position: relative;
+    }
+
+    .topbar-item a::after {
+        content: '';
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background: white;
+        transition: width 0.3s ease;
+    }
+
+    .topbar-item a:hover::after {
+        width: 100%;
+    }
+
+    .topbar-social {
+        display: flex;
+        gap: 10px;
+        margin-left: 15px;
+        padding-left: 15px;
+        border-left: 1px solid rgba(255, 255, 255, 0.3);
+    }
+
+    .topbar-social a {
+        width: 32px;
+        height: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(255, 255, 255, 0.15);
+        border-radius: 50%;
+        color: white;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        backdrop-filter: blur(10px);
+    }
+
+    .topbar-social a:hover {
+        background: white;
+        color: var(--header-primary);
+        transform: translateY(-3px) rotate(360deg);
+        box-shadow: 0 5px 15px rgba(255,255,255,0.3);
+    }
+
+    /* Scrolling Banner */
+    .scrolling-banner {
+        background: linear-gradient(135deg, #8b5cf6 0%, #3b82f6 25%, #06b6d4 50%, #10b981 75%, #f59e0b 100%);
+        background-size: 300% 300%;
+        animation: gradientShift 15s ease infinite;
+        padding: 12px 0;
+        overflow: hidden;
+        white-space: nowrap;
+        position: relative;
+        box-shadow: 0 2px 15px rgba(139, 92, 246, 0.3);
+        z-index: 1001;
+    }
+
+    .scrolling-content {
+        display: inline-block;
+        padding-left: 100%;
+        animation: scrollText 40s linear infinite;
+        color: #fff;
+        font-size: 15px;
+        font-weight: 500;
+        letter-spacing: 0.5px;
+    }
+
+    .scroll-item {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin-right: 60px;
+        text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    }
+
+    .scroll-item i {
+        font-size: 16px;
+        animation: pulse 2s ease-in-out infinite;
+    }
+
+    .scroll-item strong {
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    .scroll-item .separator {
+        font-size: 20px;
+        opacity: 0.6;
+        margin: 0 5px;
+    }
+
+    /* Enhanced Main Header */
+    .header-main {
+        background: linear-gradient(to bottom, rgba(255,255,255,0.98), rgba(255,255,255,0.95));
+        backdrop-filter: blur(10px);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        transition: all 0.3s ease;
+    }
+
+    .header-main.scrolled {
+        box-shadow: 0 6px 40px rgba(0, 0, 0, 0.15);
+        background: rgba(255,255,255,0.98);
+    }
+
+    .navbar-modern {
+        padding: 0;
+    }
+
+    .navbar-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 0;
+        position: relative;
+    }
+
+    /* Enhanced Logo */
+    .navbar-brand {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        position: relative;
+    }
+
+    .logo {
+        text-decoration: none;
+        display: flex;
+        align-items: baseline;
+        gap: 10px;
+        font-weight: 800;
+        font-size: 32px;
+        line-height: 1;
+        transition: all 0.3s ease;
+        position: relative;
+    }
+
+    .logo::before {
+        content: '';
+        position: absolute;
+        left: -10px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 4px;
+        height: 0;
+        background: linear-gradient(to bottom, var(--header-primary), var(--header-accent));
+        border-radius: 2px;
+        transition: height 0.3s ease;
+    }
+
+    .logo:hover::before {
+        height: 100%;
+    }
+
+    .logo:hover {
+        transform: translateX(8px);
+    }
+
+    .logo-primary {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        letter-spacing: 2px;
+        animation: shimmer 3s ease-in-out infinite;
+    }
+
+    .logo-secondary {
+        color: var(--header-dark);
+        letter-spacing: 1px;
+        font-weight: 700;
+    }
+
+    .tagline {
+        font-size: 12px;
+        color: #666;
+        font-style: italic;
+        margin: 0;
+        padding-left: 4px;
+        letter-spacing: 0.5px;
+        opacity: 0.8;
+        transition: opacity 0.3s ease;
+    }
+
+    .navbar-brand:hover .tagline {
+        opacity: 1;
+    }
+
+    /* Enhanced Navigation */
+    .navbar-menu {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+    }
+
+    .nav-links {
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        gap: 8px;
+    }
+
+    .nav-item {
+        position: relative;
+    }
+
+    .nav-link {
+        display: flex;
+        align-items: center;
+        padding: 12px 20px;
+        color: var(--header-dark);
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 15px;
+        border-radius: 10px;
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .nav-link span {
+        position: relative;
+        z-index: 1;
+        transition: transform 0.3s ease;
+    }
+
+    .nav-link::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(135deg, #8b5cf6, #3b82f6);
+        border-radius: 10px;
+        opacity: 0;
+        transform: scale(0.8);
+        transition: all 0.3s ease;
+    }
+
+    .nav-link::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 3px;
+        background: linear-gradient(90deg, #667eea, #764ba2);
+        border-radius: 2px;
+        transition: width 0.3s ease;
+    }
+
+    .nav-link:hover {
+        color: white;
+        transform: translateY(-2px);
+    }
+
+    .nav-link:hover::before {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    .nav-link:hover span {
+        transform: scale(1.05);
+    }
+
+    .nav-link.active {
+        color: white;
+        box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+    }
+
+    .nav-link.active::before {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    /* Enhanced Action Buttons */
+    .navbar-actions {
+        display: flex;
+        gap: 15px;
+        align-items: center;
+    }
+
+    .btn-nav {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 12px 28px;
+        border-radius: 30px;
+        font-weight: 600;
+        font-size: 14px;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        border: 2px solid transparent;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .btn-nav i {
+        font-size: 14px;
+        transition: transform 0.3s ease;
+    }
+
+    .btn-nav:hover i {
+        transform: translateX(3px);
+    }
+
+    .btn-nav-outline {
+        color: var(--header-primary);
+        border-color: var(--header-primary);
+        background: transparent;
+        position: relative;
+    }
+
+    .btn-nav-outline::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 100%;
+        background: linear-gradient(135deg, #8b5cf6, #3b82f6);
+        transition: width 0.4s ease;
+        z-index: 0;
+    }
+
+    .btn-nav-outline span,
+    .btn-nav-outline i {
+        position: relative;
+        z-index: 1;
+        transition: color 0.3s ease;
+    }
+
+    .btn-nav-outline:hover {
+        color: white;
+        border-color: var(--header-primary);
+        transform: translateY(-3px);
+        box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+    }
+
+    .btn-nav-outline:hover::before {
+        width: 100%;
+    }
+
+    /* Mobile Toggle */
+    .mobile-toggle {
+        display: none;
+        background: linear-gradient(135deg, #8b5cf6, #3b82f6);
+        border: none;
+        cursor: pointer;
+        padding: 10px;
+        border-radius: 8px;
+        z-index: 1002;
+        transition: all 0.3s ease;
+    }
+
+    .mobile-toggle:hover {
+        transform: scale(1.1);
+        box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+    }
+
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        width: 28px;
+    }
+
+    .hamburger span {
+        display: block;
+        height: 3px;
+        background: white;
+        border-radius: 3px;
+        transition: all 0.3s ease;
+    }
+
+    .mobile-toggle[aria-expanded="true"] .hamburger span:nth-child(1) {
+        transform: rotate(45deg) translate(8px, 8px);
+    }
+
+    .mobile-toggle[aria-expanded="true"] .hamburger span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .mobile-toggle[aria-expanded="true"] .hamburger span:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -7px);
+    }
+
+    /* Animations */
+    @keyframes scrollText {
+        from { transform: translateX(0); }
+        to { transform: translateX(-100%); }
+    }
+
+    @keyframes gradientShift {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+    }
+
+    @keyframes pulse {
+        0%, 100% { transform: scale(1); opacity: 1; }
+        50% { transform: scale(1.1); opacity: 0.8; }
+    }
+
+    @keyframes shimmer {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+    }
+
+    @keyframes iconFloat {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-3px); }
+    }
+
+    /* Responsive Design */
+    @media (max-width: 991px) {
+        .topbar {
+            font-size: 12px;
+            padding: 8px 0;
+        }
+        
+        .topbar-content {
+            justify-content: center;
+            text-align: center;
+        }
+        
+        .topbar-left,
+        .topbar-right {
+            gap: 15px;
+            font-size: 12px;
+        }
+        
+        .topbar-item span {
+            display: none;
+        }
+        
+        .topbar-social {
+            margin-left: 10px;
+            padding-left: 10px;
+        }
+
+        .scrolling-banner {
+            padding: 10px 0;
+        }
+
+        .scrolling-content {
+            font-size: 13px;
+            animation: scrollText 30s linear infinite;
+        }
+
+        .scroll-item {
+            margin-right: 40px;
+        }
+        
+        .mobile-toggle {
+            display: block;
+        }
+        
+        .navbar-wrapper {
+            padding: 15px 0;
+        }
+        
+        .logo {
+            font-size: 26px;
+        }
+        
+        .tagline {
+            font-size: 10px;
+        }
+        
+        .navbar-menu {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 320px;
+            height: 100vh;
+            background: linear-gradient(to bottom, #ffffff, #f8f9fa);
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 100px 30px 30px;
+            gap: 20px;
+            box-shadow: -5px 0 30px rgba(0, 0, 0, 0.2);
+            transition: right 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            overflow-y: auto;
+            z-index: 999;
+        }
+        
+        .navbar-menu.active {
+            right: 0;
+        }
+        
+        .nav-links {
+            flex-direction: column;
+            width: 100%;
+            gap: 10px;
+        }
+        
+        .nav-link {
+            width: 100%;
+            padding: 14px 20px;
+        }
+        
+        .navbar-actions {
+            flex-direction: column;
+            width: 100%;
+            gap: 12px;
+        }
+        
+        .btn-nav {
+            width: 100%;
+            justify-content: center;
+            padding: 14px 28px;
+        }
+        
+        .navbar-menu::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.6);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: -1;
+        }
+        
+        .navbar-menu.active::before {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+
+    @media (max-width: 576px) {
+        .topbar-left {
+            width: 100%;
+            justify-content: center;
+        }
+        
+        .topbar-right {
+            width: 100%;
+            justify-content: center;
+        }
+        
+        .topbar-social {
+            border-left: none;
+            margin-left: 0;
+            padding-left: 0;
+        }
+        
+        .logo {
+            font-size: 22px;
+        }
+        
+        .tagline {
+            font-size: 9px;
+        }
+        
+        .navbar-menu {
+            width: 100%;
+        }
+    }
+
+    /* Accessibility */
+    .nav-link:focus,
+    .btn-nav:focus,
+    .mobile-toggle:focus {
+        outline: 3px solid var(--header-primary);
+        outline-offset: 3px;
+    }
+
+    /* Print Styles */
+    @media print {
+        .topbar,
+        .scrolling-banner,
+        .header-main {
+            display: none;
+        }
+    }
+    </style>
+</head>
+
+<body>
+     <!-- Scrolling Text Banner Start -->
+    <div class="scrolling-banner">
+        <div class="scrolling-content">
+            
+            <span class="scroll-item">
+                <i class="fas fa-star"></i>
+               <strong>PHP Development</strong>
+            </span>
+            
+            <span class="scroll-item">
+                  <i class="fas fa-star"></i>
+                <strong>Website Design</strong>
+             </span>
+                
+            <span class="scroll-item">
+                  <i class="fas fa-star"></i>
+                <strong>Mobile Application</strong>
+            </span>
+               
+            <span class="scroll-item">
+                 <i class="fas fa-star"></i>
+                 <strong>Desktop Application</strong>
+            </span>
+            
+        </div>
+    </div>
+
+    <style>
+    .scrolling-banner {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 25%, #f093fb 50%, #4facfe 75%, #667eea 100%);
+        background-size: 300% 300%;
+        animation: gradientShift 1s ease infinite;
+        padding: 12px 0;
+        overflow: hidden;
+        white-space: nowrap;
+        position: relative;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .scrolling-content {
+        display: inline-block;
+        padding-left: 100%;
+        animation: scrollText 40s linear infinite;
+        color: #fff;
+        font-size: 15px;
+        font-weight: 500;
+        letter-spacing: 0.5px;
+    }
+
+    .scroll-item {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin-right: 60px;
+        text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    }
+
+    .scroll-item i {
+        font-size: 16px;
+        animation: pulse 2s ease-in-out infinite;
+    }
+
+    .scroll-item strong {
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    .scroll-item .separator {
+        font-size: 20px;
+        opacity: 0.6;
+        margin: 0 5px;
+    }
+
+    @keyframes scrollText {
+        from { transform: translateX(0); }
+        to { transform: translateX(-100%); }
+    }
+
+    @keyframes gradientShift {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+    }
+
+    @keyframes pulse {
+        0%, 100% { transform: scale(1); opacity: 1; }
+        50% { transform: scale(1.1); opacity: 0.8; }
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+        .scrolling-banner {
+            padding: 10px 0;
+        }
+        .scrolling-content {
+            font-size: 13px;
+            animation: scrollText 30s linear infinite;
+        }
+        .scroll-item {
+            margin-right: 40px;
+        }
+    }
+    </style>
+    <!-- Scrolling Text Banner End -->
+ 
+    <div class="topbar">
+        <div class="container">
+            <div class="topbar-content">
+                <div class="topbar-left">
+                    <div class="topbar-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>5/135-(1),Thirumalai kovil road, Kuthukalvalasai,Tenkasi-627803</span>
+                    </div>
+                </div>
+                <div class="topbar-right">
+                    <div class="topbar-item">
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:vistawinsolution@gmail.com">vistawinsolution@gmail.com</a>
+                    </div>
+                    <div class="topbar-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <a href="tel:+919789802714">+91-9789802714</a>
+                    </div>
+                    <div class="topbar-social">
+                        <a href="https://www.facebook.com/profile.php?id=61587862569636" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://x.com/VistawinS" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.linkedin.com/in/vistawin-solution-8b821a3ab" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.instagram.com/vistawin_solution/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://www.youtube.com/@VISTAWIN-m8k" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+
+   
+
+    <!-- Navbar Start -->
+    <header class="header-main" role="banner">
+        <nav class="navbar-modern" role="navigation" aria-label="Main navigation">
+            <div class="container">
+                <div class="navbar-wrapper">
+                    <!-- Logo -->
+                    <div class="navbar-brand">
+                        <a href="index.php" class="logo">
+                            <span class="logo-primary">VISTAWIN</span>
+                            <span class="logo-secondary">SOLUTION</span>
+                        </a>
+                        <p class="tagline">Smart Solutions. Clean Code. Real Impact</p>
+                    </div>
+
+                    <!-- Mobile Toggle -->
+                    <button class="mobile-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">
+                        <span class="hamburger">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </span>
+                    </button>
+
+                    <!-- Navigation Menu -->
+                    <div class="navbar-menu">
+                        <ul class="nav-links">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="index.php">
+                                    <span>Home</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link " href="project.php">
+                                    <span>Projects</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link " href="our-clients.php">
+                                    <span>Clients</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link " href="gallery.php">
+                                    <span>Gallery</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link " href="contact.php">
+                                    <span>Contact</span>
+                                </a>
+                            </li>
+                        </ul>
+                        
+                        <!-- Action Buttons -->
+                        <div class="navbar-actions">
+                            <a href="login.php" class="btn-nav btn-nav-outline">
+                                <i class="fas fa-sign-in-alt"></i>
+                                <span>Login</span>
+                            </a>
+                            
+                            <a href="razorpayment/raz_index.php" class="btn-nav btn-nav-outline">
+                                <i class="fas fa-sign-in-alt"></i>
+                                <span>payment</span>
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+    </nav>
+
+    </header>
+    <!-- Navbar End -->
+
+
+    <script>
+    // Enhanced Header Interactions
+    document.addEventListener('DOMContentLoaded', function() {
+        const header = document.querySelector('.header-main');
+        const mobileToggle = document.querySelector('.mobile-toggle');
+        const navbarMenu = document.querySelector('.navbar-menu');
+        
+        // Scroll effect
+        let lastScroll = 0;
+        window.addEventListener('scroll', function() {
+            const currentScroll = window.pageYOffset;
+            
+            if (currentScroll > 100) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+            
+            lastScroll = currentScroll;
+        });
+        
+        // Mobile menu toggle
+        if (mobileToggle) {
+            mobileToggle.addEventListener('click', function() {
+                const isExpanded = this.getAttribute('aria-expanded') === 'true';
+                this.setAttribute('aria-expanded', !isExpanded);
+                navbarMenu.classList.toggle('active');
+                document.body.style.overflow = !isExpanded ? 'hidden' : '';
+            });
+            
+            // Close menu when clicking outside
+            navbarMenu.addEventListener('click', function(e) {
+                if (e.target === this || e.target.classList.contains('nav-link')) {
+                    mobileToggle.setAttribute('aria-expanded', 'false');
+                    navbarMenu.classList.remove('active');
+                    document.body.style.overflow = '';
+                }
+            });
+        }
+        
+        // Add active state animation
+        const navLinks = document.querySelectorAll('.nav-link');
+        navLinks.forEach(link => {
+            link.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-2px)';
+            });
+            link.addEventListener('mouseleave', function() {
+                if (!this.classList.contains('active')) {
+                    this.style.transform = '';
+                }
+            });
+        });
+    });
+    </script>
+
+<!-- Hero Carousel Start -->
+<div class="floating-shapes">
+    <div class="floating-shape"></div>
+    <div class="floating-shape"></div>
+    <div class="floating-shape"></div>
+    <div class="floating-shape"></div>
+</div>
+
+<div class="hero-carousel-wrapper">
+    <div id="heroCarousel" class="carousel slide carousel-fade" data-ride="carousel" data-interval="5000" data-pause="false">
+      
+        
+        <div class="carousel-inner">
+            <!-- Slide 1 -->
+            <div class="carousel-item active">
+                <div class="hero-slide" style="background-image: url('img/m (1).jpg');">
+                    <div class="hero-overlay"></div>
+                    <div class="container h-100">
+                        <div class="row h-100 align-items-center">
+                            <div class="col-lg-7">
+                                <div class="hero-content animate-slide-up">
+                                    <span class="hero-badge">Professional Solutions</span>
+                                    <h1 class="hero-title">Transform Your Business with Custom Software</h1>
+                                    <p class="hero-description">We deliver cutting-edge software solutions tailored to your business needs. From web development to enterprise applications.</p>
+                                    <div class="hero-buttons">
+                                        <a href="project.php" class="btn btn-primary btn-lg">View Projects</a>
+                                        <a href="contact.php" class="btn btn-outline-light btn-lg">Get Started</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Slide 2 -->
+            <div class="carousel-item">
+                <div class="hero-slide" style="background-image: url('img/m (2).jpg');">
+                    <div class="hero-overlay"></div>
+                    <div class="container h-100">
+                        <div class="row h-100 align-items-center">
+                            <div class="col-lg-7">
+                                <div class="hero-content animate-slide-up">
+                                    <span class="hero-badge">Innovation First</span>
+                                    <h1 class="hero-title">Innovative Web Design & Development</h1>
+                                    <p class="hero-description">Create stunning, responsive websites that engage your audience and drive results. Modern design meets powerful functionality.</p>
+                                    <div class="hero-buttons">
+                                        <a href="project.php" class="btn btn-primary btn-lg">Our Services</a>
+                                        <a href="gallery.php" class="btn btn-outline-light btn-lg">View Gallery</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Slide 3 -->
+            <div class="carousel-item">
+                <div class="hero-slide" style="background-image: url('img/m (3).webp');">
+                    <div class="hero-overlay"></div>
+                    <div class="container h-100">
+                        <div class="row h-100  align-items-center">
+                            <div class="col-lg-7">
+                                <div class="hero-content animate-slide-up">
+                                    <span class="hero-badge">24/7 Support</span>
+                                    <h1 class="hero-title">Reliable Hosting & Support Services</h1>
+                                    <p class="hero-description">Experience unmatched reliability with our hosting solutions. We provide 24/7 support to keep your business running smoothly.</p>
+                                    <div class="hero-buttons">
+                                        <a href="contact.php" class="btn btn-primary btn-lg">Contact Us</a>
+                                        <a href="project.php" class="btn btn-outline-light btn-lg">Learn More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Slide 4 -->
+            <div class="carousel-item">
+                <div class="hero-slide" style="background-image: url('img/m (4).jpg');">
+                    <div class="hero-overlay"></div>
+                    <div class="container h-100">
+                        <div class="row h-100 align-items-center">
+                            <div class="col-lg-7">
+                                <div class="hero-content animate-slide-up">
+                                    <span class="hero-badge">Client Success</span>
+                                    <h1 class="hero-title">Your Success is Our Priority</h1>
+                                    <p class="hero-description">Join hundreds of satisfied clients who trust us with their digital transformation. Quality service and dependable support guaranteed.</p>
+                                    <div class="hero-buttons">
+                                        <a href="signup.php" class="btn btn-primary btn-lg">Get Started</a>
+                                        <a href="project.php" class="btn btn-outline-light btn-lg">View Work</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Carousel Controls -->
+        <a class="carousel-control-prev" href="#heroCarousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#heroCarousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+</div>
+<!-- Hero Carousel End -->
+
+<!-- Features Section Start -->
+<div class="features-section-ultra">
+    <div class="features-bg-elements">
+        <div class="feature-orb orb-1"></div>
+        <div class="feature-orb orb-2"></div>
+        <div class="feature-orb orb-3"></div>
+    </div>
+    
+    <div class="container">
+        <!-- Section Header -->
+        <div class="features-header">
+            <span class="features-badge">
+                <span class="badge-icon">✦</span>
+                <span>Why Choose Us</span>
+                <span class="badge-icon">✦</span>
+            </span>
+            <h2 class="features-title">
+                <span class="title-line">Powerful Features for</span>
+                <span class="title-line">Your Success</span>
+            </h2>
+        </div>
+
+        <!-- Features Grid -->
+        <div class="features-grid-ultra">
+            <!-- Feature 1 -->
+            <div class="feature-card-ultra" data-aos="fade-up" data-aos-delay="100">
+                <div class="feature-card-inner">
+                    <div class="feature-icon-ultra">
+                        <i class="fas fa-code"></i>
+                        <div class="icon-glow"></div>
+                    </div>
+                    <h3 class="feature-title-ultra">Custom Development</h3>
+                    <p class="feature-desc-ultra">Tailored software solutions built to match your unique business requirements</p>
+                    <div class="feature-hover-line"></div>
+                </div>
+            </div>
+
+            <!-- Feature 2 -->
+            <div class="feature-card-ultra" data-aos="fade-up" data-aos-delay="200">
+                <div class="feature-card-inner">
+                    <div class="feature-icon-ultra">
+                        <i class="fas fa-mobile-alt"></i>
+                        <div class="icon-glow"></div>
+                    </div>
+                    <h3 class="feature-title-ultra">Responsive Design</h3>
+                    <p class="feature-desc-ultra">Beautiful interfaces that work seamlessly across all devices and screen sizes</p>
+                    <div class="feature-hover-line"></div>
+                </div>
+            </div>
+
+            <!-- Feature 3 -->
+            <div class="feature-card-ultra" data-aos="fade-up" data-aos-delay="300">
+                <div class="feature-card-inner">
+                    <div class="feature-icon-ultra">
+                        <i class="fas fa-shield-alt"></i>
+                        <div class="icon-glow"></div>
+                    </div>
+                    <h3 class="feature-title-ultra">Secure & Reliable</h3>
+                    <p class="feature-desc-ultra">Enterprise-grade security and 99.9% uptime guarantee for your peace of mind</p>
+                    <div class="feature-hover-line"></div>
+                </div>
+            </div>
+
+            <!-- Stat 1 -->
+            <div class="feature-card-ultra stat-card-ultra" data-aos="fade-up" data-aos-delay="400">
+                <div class="feature-card-inner">
+                    <div class="feature-icon-ultra stat-icon-ultra">
+                        <i class="fas fa-chart-line"></i>
+                        <div class="icon-glow"></div>
+                    </div>
+                    <h3 class="stat-number-ultra counter" data-target="10">0</h3>
+                    <p class="stat-label-ultra">Years Experience</p>
+                    <div class="feature-hover-line"></div>
+                </div>
+            </div>
+
+            <!-- Stat 2 -->
+            <div class="feature-card-ultra stat-card-ultra" data-aos="fade-up" data-aos-delay="500">
+                <div class="feature-card-inner">
+                    <div class="feature-icon-ultra stat-icon-ultra">
+                        <i class="fas fa-project-diagram"></i>
+                        <div class="icon-glow"></div>
+                    </div>
+                    <h3 class="stat-number-ultra counter" data-target="80">0</h3>
+                    <p class="stat-label-ultra">Projects Completed</p>
+                    <div class="feature-hover-line"></div>
+                </div>
+            </div>
+
+            <!-- Stat 3 -->
+            <div class="feature-card-ultra stat-card-ultra" data-aos="fade-up" data-aos-delay="600">
+                <div class="feature-card-inner">
+                    <div class="feature-icon-ultra stat-icon-ultra">
+                        <i class="fas fa-users"></i>
+                        <div class="icon-glow"></div>
+                    </div>
+                    <h3 class="stat-number-ultra counter" data-target="50">0</h3>
+                    <p class="stat-label-ultra">Happy Clients</p>
+                    <div class="feature-hover-line"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Features Section End -->
+
+<!-- About Section Start -->
+<div class="about-section-ultra-v2">
+    <!-- Animated Background -->
+    <div class="about-bg-wrapper">
+        <div class="about-gradient-orb orb-purple"></div>
+        <div class="about-gradient-orb orb-blue"></div>
+        <div class="about-gradient-orb orb-pink"></div>
+        <div class="about-pattern-dots"></div>
+    </div>
+    
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-11">
+                <!-- Main About Card -->
+                <div class="about-main-card">
+                    <!-- Decorative Elements -->
+                    <div class="card-decoration top-left"></div>
+                    <div class="card-decoration top-right"></div>
+                    <div class="card-decoration bottom-left"></div>
+                    <div class="card-decoration bottom-right"></div>
+                    
+                    <!-- Content Wrapper -->
+                    <div class="about-content-wrapper">
+                        <!-- Badge -->
+                        <div class="about-badge-wrapper">
+                            <div class="badge-glow"></div>
+                            <div class="about-badge-modern">
+                                <span class="badge-dot"></span>
+                                <span class="badge-text">About Us</span>
+                                <span class="badge-dot"></span>
+                            </div>
+                        </div>
+                        
+                        <!-- Title -->
+                        <h2 class="about-title-modern">
+                            <span class="title-word" data-text="Innovative">Innovative</span>
+                            <span class="title-word" data-text="Solutions">Solutions</span>
+                            <span class="title-break"></span>
+                            <span class="title-word" data-text="for">for</span>
+                            <span class="title-word" data-text="Modern">Modern</span>
+                            <span class="title-word" data-text="Businesses">Businesses</span>
+                        </h2>
+                        
+                        <!-- Description -->
+                        <div class="about-description-modern">
+                            <div class="description-highlight">
+                                <div class="highlight-icon">
+                                    <i class="fas fa-quote-left"></i>
+                                </div>
+                                <p class="highlight-text">
+                                    In today's digital world, having a reliable software solution is crucial for any business that wants to scale up and succeed.
+
+                                    Whether you're looking to streamline your operations or improve customer experience, the right software can make all the difference.
+                                </p>
+                                 </div>
+                                <div class="company-highlight">
+                                    <div class="company-icon">
+                                        <i class="fas fa-building"></i>
+                                    </div>
+                                    <div class="company-info">
+                                        <h3 class="company-name">Vistawin Solution</h3>
+                                        <p class="company-desc">
+                                           Vistawin Solution is a custom software development company in Tenkasi delivering innovative software solutions to clients across the globe. From mobile apps to complex software systems, our experienced team of developers create high-quality, reliable solutions that exceed your expectations.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Feature Icons -->
+                        <div class="about-features-icons">
+                            <div class="feature-icon-item">
+                                <div class="icon-circle">
+                                    <i class="fas fa-code"></i>
+                                </div>
+                                <span class="icon-label">Custom Development</span>
+                            </div>
+                            <div class="feature-icon-item">
+                                <div class="icon-circle">
+                                    <i class="fas fa-mobile-alt"></i>
+                                </div>
+                                <span class="icon-label">Mobile Apps</span>
+                            </div>
+                            <div class="feature-icon-item">
+                                <div class="icon-circle">
+                                    <i class="fas fa-globe"></i>
+                                </div>
+                                <span class="icon-label">Global Reach</span>
+                            </div>
+                            <div class="feature-icon-item">
+                                <div class="icon-circle">
+                                    <i class="fas fa-shield-alt"></i>
+                                </div>
+                                <span class="icon-label">Reliable Solutions</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- About Section End -->
+
+<!-- Services Section Start -->
+<div class="services-section">
+    <div class="container">
+        <div class="text-center mb-5">
+            <span class="section-badge">Our Services</span>
+            
+        </div>
+        
+        <div class="row">
+            <!-- PHP Development -->
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="service-card card-tilt reveal gpu-accelerated">
+                    <div class="service-image image-zoom">
+                        <img src="img/m (8).png" alt="PHP Development" class="img-fluid" loading="lazy">
+                        <div class="service-overlay">
+                            <i class="fab fa-php"></i>
+                        </div>
+                    </div>
+                    <div class="service-content">
+                        <h4>PHP Development</h4>
+                        <p>Custom PHP web applications, CMS solutions, and dynamic websites built with modern frameworks and best practices.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> Custom Web Applications</li>
+                            <li><i class="fas fa-check"></i> E-commerce Solutions</li>
+                            <li><i class="fas fa-check"></i> API Development</li>
+                        </ul>
+                        <a href="project.php" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Web Hosting -->
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="service-card card-tilt reveal gpu-accelerated">
+                    <div class="service-image image-zoom">
+                        <img src="img/m (10).png" alt="Web Hosting" class="img-fluid" loading="lazy">
+                        <div class="service-overlay">
+                            <i class="fas fa-server"></i>
+                        </div>
+                    </div>
+                    <div class="service-content">
+                        <h4>Web Hosting</h4>
+                        <p>Reliable and secure hosting solutions with 99.9% uptime guarantee, fast performance, and 24/7 technical support.</p>
+                        <ul class="service-featureys">
+                            <li><i class="fas fa-check"></i> Shared & VPS Hosting</li>
+                            <li><i class="fas fa-check"></i> SSL Certificates</li>
+                            <li><i class="fas fa-check"></i> Daily Backups</li>
+                        </ul>
+                        <a href="contact.php" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Mobile Application -->
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="service-card card-tilt reveal gpu-accelerated">
+                    <div class="service-image image-zoom">
+                        <img src="img/m (9).png" alt="Mobile Application" class="img-fluid" loading="lazy">
+                        <div class="service-overlay">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                    </div>
+                    <div class="service-content">
+                        <h4>Mobile Application</h4>
+                        <p>Native and cross-platform mobile apps for iOS and Android that deliver exceptional user experiences.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> iOS & Android Apps</li>
+                            <li><i class="fas fa-check"></i> Cross-Platform Solutions</li>
+                            <li><i class="fas fa-check"></i> App Maintenance</li>
+                        </ul>
+                        <a href="project.php" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Desktop Application -->
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="service-card card-tilt reveal gpu-accelerated">
+                    <div class="service-image image-zoom">
+                        <img src="img/Desktop_app.png" alt="Desktop Application" class="img-fluid" loading="lazy">
+                        <div class="service-overlay">
+                            <i class="fas fa-desktop"></i>
+                        </div>
+                    </div>
+                    <div class="service-content">
+                        <h4>Desktop Application</h4>
+                        <p>Powerful desktop software for Windows including inventory, clinic and pharmacy management systems.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> Inventory Management</li>
+                            <li><i class="fas fa-check"></i> Clinic Systems</li>
+                            <li><i class="fas fa-check"></i> Custom Solutions</li>
+                        </ul>
+                        <a href="project.php" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Services Section End -->
+
+
+
+<script>
+// Ensure hero carousel auto-plays every 5 seconds
+$(document).ready(function() {
+    $('#heroCarousel').carousel({
+        interval: 5000,
+        pause: false,
+        ride: 'carousel'
+    });
+    
+    // Restart carousel after user interaction
+    $('#heroCarousel').on('slid.bs.carousel', function () {
+        $('#heroCarousel').carousel('cycle');
+    });
+});
+</script>
+
+<!-- Footer Start -->
+<footer class="container-fluid text-white border-top py-5 px-sm-3 px-md-5" style="background: linear-gradient(135deg, #1a1a2e 0%, #2d1b69 50%, #1e3a8a 100%); border-color: rgba(255,255,255,.08) !important;">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4 mb-4">
+        <a href="index.php" class="text-decoration-none">
+         
+        </a>
+      </div>
+
+      <div class="col-lg-3 mb-4">
+        <h6 class="text-white mb-3">Contact</h6>
+        <p class="small mb-1"><i class="fa fa-map-marker-alt mr-2 text-primary"></i>5/135-(1), Thirumalai kovil road, Kuthukalvalasai,Tenkasi-627803</p>
+        <p class="small mb-1"><i class="fa fa-envelope mr-2 text-primary"></i>vistawinsolution@gmail.com</p>
+        <p class="small mb-0"><i class="fas fa-mobile-alt mr-2 text-primary"></i>+91-9789802714</p>
+      </div>
+    </div>
+
+    <div class="row mt-4 pt-4 border-top" style="border-color: rgba(255,255,255,.08) !important;">
+      <div class="col-12 text-center">
+        <p class="small mb-0">&copy; 2026 All Rights Reserved. Vistawin Solution</p>
+      </div>
+    </div>
+  </div>
+ <div>
+   <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top" aria-label="Back to top" style="background: linear-gradient(135deg, #8b5cf6, #3b82f6); border: none; box-shadow: 0 5px 20px rgba(139, 92, 246, 0.5);"><i class="fa fa-angle-double-up"></i></a>
+</div>
+      
+</footer>
+<!-- Footer End -->
+
+<!-- Back to Top -->
+
+
+<!-- JavaScript Libraries -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+<script src="lib/easing/easing.min.js"></script>
+<script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+<!-- Contact Javascript File -->
+<script src="mail/jqBootstrapValidation.min.js"></script>
+<script src="mail/contact.js"></script>
+
+<!-- Template Javascript -->
+<script src="js/main.js"></script>
+
+<!-- Header Interactions -->
+<script src="js/header-interactions.js"></script>
+
+<!-- Advanced Interactions -->
+<script src="js/interactions.js"></script>
+
+<!-- Production UI Enhancements -->
+<script src="js/production-ui.js"></script>
+
+<!-- About Section Interactions -->
+<script src="js/about-section.js"></script>
+
+<!-- Services Section Interactions -->
+<script src="js/services-section.js"></script>
+
+<!-- Mobile App JavaScript -->
+<script src="js/mobile-app.js"></script>
+
+<!-- Mobile Fast Performance -->
+<script src="js/mobile-fast.js"></script>
+
+<script>
+// Counter Animation for Features Section
+document.addEventListener('DOMContentLoaded', function() {
+    const counters = document.querySelectorAll('.counter');
+    const speed = 200;
+    let hasAnimated = false;
+    
+    const animateCounter = (counter) => {
+        const target = parseInt(counter.getAttribute('data-target'));
+        const updateCount = () => {
+            const count = parseInt(counter.innerText);
+            const increment = target / speed;
+            
+            if (count < target) {
+                counter.innerText = Math.ceil(count + increment);
+                setTimeout(updateCount, 10);
+            } else {
+                counter.innerText = target + '+';
+            }
+        };
+        updateCount();
+    };
+    
+    // Intersection Observer for counter animation
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting && !hasAnimated) {
+                hasAnimated = true;
+                counters.forEach(counter => {
+                    animateCounter(counter);
+                });
+            }
+        });
+    }, { threshold: 0.5 });
+    
+    const featuresSection = document.querySelector('.features-section-ultra');
+    if (featuresSection) {
+        observer.observe(featuresSection);
+    }
+    
+    // Simple AOS-like animation on scroll
+    const animateOnScroll = () => {
+        const elements = document.querySelectorAll('[data-aos]');
+        elements.forEach(el => {
+            const rect = el.getBoundingClientRect();
+            const isVisible = rect.top < window.innerHeight - 100;
+            
+            if (isVisible) {
+                el.classList.add('aos-animate');
+            }
+        });
+    };
+    
+    window.addEventListener('scroll', animateOnScroll);
+    animateOnScroll(); // Initial check
+});
+</script>
+
+<script>
+// Simple newsletter feedback (no server integration). Replace with AJAX endpoint if available.
+document.getElementById('newsletterForm')?.addEventListener('submit', function(e){
+  e.preventDefault();
+  var btn = this.querySelector('button[type="submit"]');
+  btn.disabled = true;
+  btn.innerText = 'Subscribed';
+  
+  // Show success notification
+  if (window.notify) {
+    window.notify.show('Successfully subscribed to newsletter!', 'success');
+  }
+  
+  setTimeout(function(){ 
+    btn.disabled = false; 
+    btn.innerText = 'Subscribe'; 
+  }, 3000);
+});
+</script>
+
+</body>
+
+</html>
